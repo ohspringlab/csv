@@ -1,0 +1,14 @@
+1,35.875,7.375,Drawer,1,Drawer Face,A-3333
+1,24.375,35,PIGNON (L),N1,Finished End,A-1000
+2,23.875,15,Drawer,2&3,Drawer Face,A-3333
+1,23.875,7.4375,Drawer,2,Drawer Face,A-3333
+3,23.875,7.375,Drawer,2&3(2),Drawer Face,A-3333
+1,23.5,30.25,PIGNON (L),1,Finished End,A-1000
+1,23.5,30.25,PIGNON (R),2,Finished End,A-1000
+1,21,34.75,Door,N3,Panelized End as part of box,None
+1,17.875,22.5,Door(L),1,Cabinet Door,A-3333
+1,17.875,22.5,Door(R),1,Cabinet Door,A-3333
+1,4.5,60,Toe Skin,1,,A-0101
+1,4.5,24.625,Toe Skin,N2,,A-0101
+2,4.5,20.5,Toe Skin,1&2,,A-0101
+1,3,30.25,Stile,N2,,None

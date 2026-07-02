@@ -1,0 +1,31 @@
+{
+  "piece_names": [
+    "PIGNON (L)",
+    "PIGNON (R)",
+    "DESSUS/DESSOUS",
+    "DOS",
+    "TAB AJUST",
+    "PARTITION",
+    "PORTES/FAÇADES",
+    "Stile",
+    "Toe Skin"
+  ],
+  "drawer_piece_names": [
+    "Drw L Side",
+    "Drw R Side",
+    "Drw Front",
+    "Drw Back",
+    "Drw Bottom"
+  ],
+  "piece_aliases": {
+    "TAB FIXE":  "DESSUS/DESSOUS",
+    "Door(L)":   "PORTES/FAÇADES",
+    "Door(R)":   "PORTES/FAÇADES",
+    "Drawer":    "PORTES/FAÇADES",
+    "Door":      "PARTITION",
+    "PANEL":     "PARTITION"
+  },
+  "column_groups": {
+    "description": "Description des pièces de meuble"
+  }
+}

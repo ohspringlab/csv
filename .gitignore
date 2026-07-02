@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Local virtual environments
+.venv/
+venv/
+env/
+
+# PyInstaller / desktop build outputs
+build/
+dist/
+*.spec~
+
+# App-generated local preferences
+debit_app/config/theme.json
+debit_app/config/preferences.json
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
