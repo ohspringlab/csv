@@ -16,11 +16,11 @@
     "Drw Front",
     "Drw Back",
     "Drw Bottom",
-    "Tray Bottom",
-    "Tray Face",
     "Tray Side L",
     "Tray Side R",
-    "Tray Back"
+    "Tray Face",
+    "Tray Back",
+    "Tray Bottom"
   ],
   "piece_aliases": {
     "TAB FIXE":            "DESSUS/DESSOUS",

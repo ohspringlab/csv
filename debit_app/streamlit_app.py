@@ -770,6 +770,20 @@ def inject_component_style():
             width: 100%;
         }
 
+        /* ── Sidebar widget labels — force bright text ── */
+        [data-testid="stSidebar"] .stSlider label,
+        [data-testid="stSidebar"] .stColorPicker label,
+        [data-testid="stSidebar"] .stTextInput label,
+        [data-testid="stSidebar"] .stSelectbox label,
+        [data-testid="stSidebar"] .stTextArea label,
+        [data-testid="stSidebar"] .stToggle label,
+        [data-testid="stSidebar"] [data-testid="stWidgetLabel"] p,
+        [data-testid="stSidebar"] [data-testid="stWidgetLabel"] {
+            color: #e2e8f0 !important;
+            font-size: 12px !important;
+            font-weight: 600 !important;
+        }
+
         /* ── Sidebar ── */
         [data-testid="stSidebar"] {
             background: #0d1424 !important;
@@ -2113,9 +2127,19 @@ def main():
 
             col_a, col_b = st.columns([1, 2])
             with col_a:
+                # Bright filename label above the color picker
+                stem = Path(uf.name).stem[:24]
+                st.markdown(
+                    f'<div style="font-size:12px;font-weight:600;color:#e2e8f0;'
+                    f'font-family:Inter,sans-serif;margin-bottom:2px;'
+                    f'white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">'
+                    f'{html.escape(stem)}</div>',
+                    unsafe_allow_html=True,
+                )
                 picked = st.color_picker(
-                    Path(uf.name).stem[:20],
+                    stem,
                     key=key_color,
+                    label_visibility="collapsed",
                 )
                 custom_colors[uf.name] = picked
                 # Detect if user changed from saved default
@@ -2123,6 +2147,12 @@ def main():
                     color_changed = True
                     st.session_state[f"_saved_{saved_color_key}"] = picked
             with col_b:
+                st.markdown(
+                    f'<div style="font-size:11px;font-weight:600;color:#94a3b8;'
+                    f'font-family:Inter,sans-serif;margin-bottom:2px;">'
+                    f'{html.escape(labels.get("file_prefix_label","Préfixe meuble"))}</div>',
+                    unsafe_allow_html=True,
+                )
                 prefix_val = st.text_input(
                     labels.get("file_prefix_label", "Cabinet prefix (optional)"),
                     value=st.session_state.get(key_prefix, ""),
